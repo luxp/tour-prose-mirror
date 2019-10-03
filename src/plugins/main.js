@@ -10,7 +10,7 @@ import { buildMenuItems } from './menu'
 import {
   getInputRules as getMdInputRules,
   buildKeymap as buildMdKeymap
-} from './markdown/main'
+} from '../markdown/main'
 
 // !! This module exports helper functions for deriving a set of basic
 // menu items, input rules, or key bindings from a schema. These

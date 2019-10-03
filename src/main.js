@@ -2,7 +2,7 @@ import { EditorView } from 'prosemirror-view'
 import { EditorState } from 'prosemirror-state'
 import { defaultMarkdownSerializer } from 'prosemirror-markdown'
 import { DOMParser } from 'prosemirror-model'
-import { getSchema } from './schema/main'
+import { getSchema } from './schema'
 import { getPlugins } from './plugins/main'
 
 let schema = getSchema()
