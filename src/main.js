@@ -1,9 +1,9 @@
 import { EditorView } from 'prosemirror-view'
 import { EditorState } from 'prosemirror-state'
-import { defaultMarkdownSerializer } from 'prosemirror-markdown'
 import { DOMParser } from 'prosemirror-model'
 import { getSchema } from './schema'
 import { getPlugins } from './plugins/main'
+import { getNodeViews } from './node-views'
 
 let schema = getSchema()
 class ProseMirrorView {
@@ -12,18 +12,9 @@ class ProseMirrorView {
       state: EditorState.create({
         doc: DOMParser.fromSchema(schema).parse(''),
         plugins: getPlugins({ schema })
-      })
+      }),
+      nodeViews: getNodeViews()
     })
-  }
-
-  get content() {
-    return defaultMarkdownSerializer.serialize(this.view.state.doc || '')
-  }
-  focus() {
-    this.view.focus()
-  }
-  destroy() {
-    this.view.destroy()
   }
 }
 
