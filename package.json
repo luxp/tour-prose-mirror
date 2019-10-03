@@ -1,0 +1,28 @@
+{
+  "name": "tour-prose-mirror",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/prosemirror-history": "^1.0.1",
+    "@types/prosemirror-keymap": "^1.0.1",
+    "@types/prosemirror-schema-basic": "^1.0.1",
+    "@types/prosemirror-schema-list": "^1.0.1",
+    "@types/prosemirror-state": "^1.2.3",
+    "@types/prosemirror-view": "^1.11.1",
+    "parcel": "^1.12.3",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "prosemirror-example-setup": "^1.0.1",
+    "prosemirror-model": "^1.7.2",
+    "prosemirror-schema-basic": "^1.0.1",
+    "prosemirror-schema-list": "^1.0.3",
+    "prosemirror-state": "^1.2.4",
+    "prosemirror-view": "^1.11.4"
+  }
+}
