@@ -243,6 +243,7 @@ export function buildMenuItems(schema) {
         label: 'Level ' + i,
         attrs: { level: i }
       })
+
   if ((type = schema.nodes.horizontal_rule)) {
     let hr = type
     r.insertHorizontalRule = new MenuItem({
@@ -257,10 +258,46 @@ export function buildMenuItems(schema) {
     })
   }
 
+  if ((type = schema.nodes.abstract)) {
+    let abstract = type
+    r.insertAbstract = new MenuItem({
+      title: '插入摘要',
+      label: '插入摘要',
+      enable(state) {
+        return canInsert(state, abstract)
+      },
+      run(state, dispatch) {
+        dispatch(state.tr.replaceSelectionWith(abstract.create()))
+      }
+    })
+  }
+
+  if ((type = schema.nodes.englishAbstract)) {
+    let abstract = type
+    r.insertEnglishAbstract = new MenuItem({
+      title: '插入英文摘要',
+      label: '插入英文摘要',
+      enable(state) {
+        return canInsert(state, abstract)
+      },
+      run(state, dispatch) {
+        dispatch(state.tr.replaceSelectionWith(abstract.create()))
+      }
+    })
+  }
+
   let cut = arr => arr.filter(x => x)
-  r.insertMenu = new Dropdown(cut([r.insertImage, r.insertHorizontalRule]), {
-    label: 'Insert'
-  })
+  r.insertMenu = new Dropdown(
+    cut([
+      r.insertImage,
+      r.insertAbstract,
+      r.insertEnglishAbstract,
+      r.insertHorizontalRule
+    ]),
+    {
+      label: 'Insert'
+    }
+  )
   r.typeMenu = new Dropdown(
     cut([
       r.makeParagraph,

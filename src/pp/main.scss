@@ -1,0 +1,16 @@
+.ppNodesAbstract,
+.ppNodesEnglishAbstract {
+  border: 1px dashed #d3d2d2;
+  padding: 10px;
+  &::before {
+    content: '摘要';
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.ppNodesEnglishAbstract::before {
+  content: 'Abstract';
+}
