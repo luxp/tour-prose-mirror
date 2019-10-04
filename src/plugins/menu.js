@@ -286,11 +286,26 @@ export function buildMenuItems(schema) {
     })
   }
 
+  if ((type = schema.nodes.keywords)) {
+    let keywords = type
+    r.insertKeywords = new MenuItem({
+      title: '插入关键词',
+      label: '插入关键词',
+      enable(state) {
+        return canInsert(state, keywords)
+      },
+      run(state, dispatch) {
+        dispatch(state.tr.replaceSelectionWith(keywords.create()))
+      }
+    })
+  }
+
   let cut = arr => arr.filter(x => x)
   r.insertMenu = new Dropdown(
     cut([
       r.insertImage,
       r.insertAbstract,
+      r.insertKeywords,
       r.insertEnglishAbstract,
       r.insertHorizontalRule
     ]),

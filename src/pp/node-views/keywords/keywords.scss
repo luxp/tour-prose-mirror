@@ -1,0 +1,15 @@
+.ppNodesKeywords {
+  border: 1px dashed #d3d2d2;
+  padding: 5px;
+
+  .placeholder {
+    color: rgb(131, 131, 131);
+    display: none;
+    position: absolute;
+  }
+  &.empty {
+    .placeholder {
+      display: inline;
+    }
+  }
+}
