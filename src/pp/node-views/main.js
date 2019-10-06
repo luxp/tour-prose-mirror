@@ -1,3 +1,2 @@
-export { image } from './image'
-export { paragraph } from './paragraph'
 export { keywords, englishKeywords } from './keywords/keywords'
+export { imgFigure } from './img-figure/img-figure'

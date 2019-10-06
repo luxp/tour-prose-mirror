@@ -29,14 +29,14 @@ let ppNodes = {
   },
   englishKeywords: {
     content: 'inline*',
+    group: 'block'
+  },
+  imgFigure: {
+    content: 'inline*',
     group: 'block',
-    parseDOM: [
-      {
-        tag: 'p.ppNodesEnglishKeywords'
-      }
-    ],
-    toDOM() {
-      return ['p', { class: 'ppNodesEnglishKeywords' }, 0]
+    attrs: {
+      caption: { default: 'defaultCaption' },
+      src: { default: null }
     }
   }
 }

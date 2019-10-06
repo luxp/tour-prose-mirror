@@ -19,3 +19,5 @@ let view = new EditorView(target, {
     view.updateState(newState)
   }
 })
+
+window.view = view

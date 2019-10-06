@@ -1,2 +1,0 @@
-@charset "UTF-8";.ppNodesAbstract,.ppNodesEnglishAbstract{border:1px dashed #d3d2d2;padding:10px}.ppNodesAbstract:before,.ppNodesEnglishAbstract:before{content:"摘要";display:block;font-size:20px;font-weight:700;margin-bottom:10px}.ppNodesEnglishAbstract:before{content:"Abstract"}.ppNodesKeywords{border:1px dashed #d3d2d2;padding:5px}.ppNodesKeywords .placeholder{color:#838383;display:none;position:absolute}.ppNodesKeywords.empty .placeholder{display:inline}
-/*# sourceMappingURL=main.22d7490a.css.map */

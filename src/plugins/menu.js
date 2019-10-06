@@ -300,6 +300,20 @@ export function buildMenuItems(schema) {
     })
   }
 
+  if ((type = schema.nodes.imgFigure)) {
+    let imgFigure = type
+    r.insertKeywords = new MenuItem({
+      title: '插入图片',
+      label: '插入图片',
+      enable(state) {
+        return canInsert(state, imgFigure)
+      },
+      run(state, dispatch) {
+        dispatch(state.tr.replaceSelectionWith(imgFigure.create()))
+      }
+    })
+  }
+
   let cut = arr => arr.filter(x => x)
   r.insertMenu = new Dropdown(
     cut([
