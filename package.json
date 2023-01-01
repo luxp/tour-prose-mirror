@@ -14,7 +14,7 @@
     "@types/prosemirror-schema-list": "^1.0.1",
     "@types/prosemirror-state": "^1.2.3",
     "@types/prosemirror-view": "^1.11.1",
-    "parcel": "^1.12.3",
+    "parcel": "^2.8.2",
     "sass": "^1.23.0",
     "typescript": "^3.6.3"
   },
